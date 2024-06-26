@@ -15,7 +15,7 @@ on:
       OP_IP:
         description: 'IP选项'     
         required: false
-        default: '192.168.2.2' 
+        default: '192.168.1.2' 
         type: string
 
       OP_rootfs:
@@ -27,7 +27,7 @@ on:
       OP_author:
         description: '定制作者'     
         required: false
-        default: 'shiyu1314' 
+        default: '***' 
         type: string
 
       name:
@@ -42,7 +42,7 @@ on:
       CUSTOM_PLUGINS:
         description: '自定义插件名称，用逗号分隔'
         required: false
-        default: 'luci-app-dockerman,luci-app-mosdns,luci-theme-argon,luci-app-ttyd,luci-app-diskman,luci-app-hd-idle,luci-app-homeproxy,luci-app-samba4,luci-app-adguardhome,luci-app-emby,luci-app-openclash,luci-app-usb-printer'
+        default: 'luci-app-dockerman,luci-app-mosdns,luci-theme-argon,luci-app-ttyd,luci-app-diskman,luci-app-homeproxy,luci-app-samba4,luci-app-openclash,ariang,luci-app-aria2,luci-app-filebrowser-go,luci-app-vlmcsd'
         type: string
 
 env:
@@ -59,7 +59,7 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        kernel_version: ["6.1", "6.6"]
+        kernel_version: ["6.6"]
 
     steps: 
     - name: 释放磁盘空间
