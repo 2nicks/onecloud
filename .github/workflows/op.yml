@@ -48,9 +48,6 @@ jobs:
     strategy:
       matrix:
         repo_info:
-          - {repo_url: "https://github.com/openwrt/openwrt", kernel_version: "6.1", branch: "openwrt-23.05"}
-          - {repo_url: "https://github.com/openwrt/openwrt", kernel_version: "6.6", branch: "openwrt-23.05"}
-          - {repo_url: "https://github.com/immortalwrt/immortalwrt", kernel_version: "6.1", branch: "openwrt-23.05"}
           - {repo_url: "https://github.com/immortalwrt/immortalwrt", kernel_version: "6.6", branch: "openwrt-23.05"}
 
     steps: 
