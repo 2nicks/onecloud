@@ -10,7 +10,8 @@ cp -rf --parents target/linux package/kernel package/boot package/network/utils/
 cd ..
 
 echo 'src-git dns https://github.com/sbwml/luci-app-mosdns' >>feeds.conf.default
-echo 'src-git xd https://github.com/shiyu1314/openwrt-packages' >>feeds.conf.default
+echo 'src-git xd https://github.com/2nicks/package' >>feeds.conf.default
+#echo 'src-git xd https://github.com/shiyu1314/openwrt-packages' >>feeds.conf.default
 git clone -b master --depth 1 --single-branch https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 
