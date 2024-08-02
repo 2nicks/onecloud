@@ -12,9 +12,10 @@ cd ..
 echo 'src-git dns https://github.com/sbwml/luci-app-mosdns' >>feeds.conf.default
 echo 'src-git xd https://github.com/2nicks/package' >>feeds.conf.default
 #echo 'src-git xd https://github.com/shiyu1314/openwrt-packages' >>feeds.conf.default
+
 git clone -b master --depth 1 --single-branch https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 https://github.com/sirpdboy/sirpdboy-package
-
+   
 ./scripts/feeds update -a
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/packages/net/v2ray-geodata
