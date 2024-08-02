@@ -31,7 +31,7 @@ on:
       CUSTOM_PLUGINS:
         description: '自定义插件名称，用空格分隔'
         required: false
-        default: 'luci-app-lucky luci-app-fileassistant luci-app-dockerman luci-app-mosdns luci-theme-argon luci-app-ttyd luci-app-diskman luci-app-homeproxy luci-app-samba4 luci-app-openclash'
+        default: 'luci-app-filebrowser-go luci-app-dockerman luci-app-mosdns luci-theme-argon luci-app-ttyd luci-app-diskman luci-app-homeproxy luci-app-samba4 luci-app-openclash'
         type: string
 
 env:
@@ -48,7 +48,7 @@ jobs:
     strategy:
       matrix:
         repo_info:
-          - {repo_url: "https://github.com/openwrt/openwrt", kernel_version: "6.1", branch: "openwrt-23.05"}
+          #- {repo_url: "https://github.com/openwrt/openwrt", kernel_version: "6.1", branch: "openwrt-23.05"}
           #- {repo_url: "https://github.com/openwrt/openwrt", kernel_version: "6.6", branch: "openwrt-23.05"}
           - {repo_url: "https://github.com/immortalwrt/immortalwrt", kernel_version: "6.1", branch: "openwrt-23.05"}
           #- {repo_url: "https://github.com/immortalwrt/immortalwrt", kernel_version: "6.6", branch: "openwrt-23.05"}
@@ -166,9 +166,7 @@ jobs:
         CONFIG_PACKAGE_kmod-usb-net-cdc-ether=y
         CONFIG_PACKAGE_zram-swap=y
         CONFIG_PACKAGE_luci-app-netwizard=y
-        CONFIG_PACKAGE_luci-app-autotimeset=y
-        CONFIG_PACKAGE_luci-app-advanced=y
-        CONFIG_PACKAGE_lluci-app-poweroffdevice=y
+        CONFIG_PACKAGE_luci-app-autoreboot=y
         EOF
         
         if [[ "${{ matrix.repo_info.repo_url }}" == "https://github.com/openwrt/openwrt" ]]; then
